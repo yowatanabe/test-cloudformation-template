@@ -1,11 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: "Ver5"
-
-Parameters:
-  # SSH用キーペアの指定
-  KeyPair:
-    Description: KeyPair Name
-    Type: AWS::EC2::KeyPair::KeyName
+Description: "for jenkins test"
 
 Resources:
   # VPC
@@ -105,7 +99,7 @@ Resources:
       SubnetId: !Ref PublicSubnet1a
       InstanceType: t2.micro
       AvailabilityZone: ap-northeast-1a
-      KeyName: !Ref KeyPair
+      KeyName: ec2-test2
       Monitoring: false
       ImageId: ami-068a6cefc24c301d2
       InstanceInitiatedShutdownBehavior: stop
