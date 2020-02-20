@@ -24,11 +24,3 @@ Resources:
 #     Properties:
 #       InstanceId: !Ref EC2Instance03
 #       Domain: vpc
-
-# ElasticIp定義  
-  ElasticIpAssociation:
-    Type: AWS::EC2::EIPAssociation
-    Properties:
-      EIP: "13.230.185.29"
-      InstanceId: !Ref EC2Instance03
-#    DependsOn: EC2Instance03
