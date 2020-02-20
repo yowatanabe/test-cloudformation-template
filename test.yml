@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: "for jenkins test222"
+Description: "for jenkins test"
 
 Resources:
   # EC2インスタンス（WEB)
