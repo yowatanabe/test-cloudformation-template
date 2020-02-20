@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: "bbbbbbbbbbb"
+Description: "add EIP"
 
 Resources:
   # EC2インスタンス（WEB)
@@ -24,3 +24,11 @@ Resources:
 #     Properties:
 #       InstanceId: !Ref EC2Instance03
 #       Domain: vpc
+
+# ElasticIp定義  
+  ElasticIpAssociation:
+    Type: AWS::EC2::EIPAssociation
+    Properties:
+      EIP: "13.230.185.29"
+      InstanceId: !Ref EC2Instance03
+    DependsOn: EC2Instance03
